@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Short Demo Experiment</title>
+        <link href = "exp.css" type="text/css" rel="stylesheet"/>
+    </head>
+
+    <body>
+        <!--======== INSTRUCTIONS ========-->
+        <div id="instruction-box" class="box">
+            <p id="instruction-text" class="instructions"></p>
+            <img id='instr-img' src='images/blank.jpg' draggable='false' alt='Image Error: Please email yichiachen@g.ucla.edu with the message "IMG-ERROR" to receive credit.'></img>
+            <button id="next-button"  class="next-button" onclick='instr.next()'>Next &raquo;</button>
+            <!--======== INFORMED CONSENT FORM ========-->
+            <div id="consent-form" class="hide">
+                <p id = "fix"> To conduct this experiment, we need to include this information sheet:</p>
+                <div class = "form-area">
+                    <strong>INFORMATION SHEET</strong><br /><br />
+                    You are invited to participate in a research study on human cognition, conducted by Hongjing Lu, PhD, of the Dept. of Psychology at UCLA. You were selected as a possible participant in this study because you have normal or corrected vision, and are 18 years of age or older. For scientific reasons, this consent form does not include complete information about the study hypotheses and the research questions being tested. You will be fully debriefed following your participation in the research.<br /><br />
+                    <strong>Purpose of Study</strong><br />
+                    The purpose of the study is to understand human perception and cognition.<br /><br />
+                    <strong>Procedures Involved in Study</strong><br />
+                    If you agree to participate, you may be presented with images, videos, or sounds on a computer screen, and answer simple questions and/or perform simple tasks by interacting with a website via a keyboard or a computer mouse. You may also be asked to fill out some questionnaires about your personality or experience, which will take at max 15 minutes. Your responses will be recorded by the computer and will not be identified with you in any way. You may receive a demographic questionnaire to collect information of your age, gender, ethnicity, and language. The session will take at most 60 minutes.<br /><br />
+                    <strong>Potential Risks and Discomforts</strong><br />
+                    There is no known risk/discomfort in this study. If you experience any discomfort during the course of the experiment, you can stop at any time and notify the experimenter.<br /><br />
+                    <strong>Potential Benefits to Subject</strong><br />
+                    There are no direct benefits from participating in this study.<br /><br />
+                    <strong>Potential Benefits to Society</strong><br />
+                    The findings of the study will help improve procedures for making important decisions to avoid unwanted biases. For example, individual's cognitive tendencies may influence their decision making on finance, relationships, or diets, and their behaviors in different contexts like internet versus in-person interactions. By understanding how people differ from each other, we will be able to design better environments for people to make rational and just decisions in different domains in life.<br /><br />
+                    <strong>Payment for Participation</strong><br />
+                    You would receive 0.5 hour of credit every 30 minute for your psychology class if you signed up for the study through the UCLA Psychology Department Subject Pool; otherwise, you would receive the payment in the rate of $10 per hour for your participation.<br /><br />
+                    <strong>Confidentiality</strong><br />
+                    Your identity in this study will be treated as confidential. The results of the study, including laboratory or any other data, may be published for scientific purposes but will not include any identifiable references to you. The researchers will do their best to make sure that your private information is kept confidential. Information about you will be handled as confidentially as possible, but participating in research may involve a loss of privacy and the potential for a breach in confidentiality. Study data will be physically and electronically secured.  As with any use of electronic means to store data, there is a risk of breach of data security. Your data, including de-identified data may be kept for use in future research.<br /><br />
+                    Your IP Addresses may be collected to prevent the same IP address from participating twice. Your platform ID (e.g., Mturk worker ID, Prolific ID, or Sona ID) will not be shared with anyone outside of the research team and will not be linked to study responses. However, any work performed on MTurk can be linked to the user's public profile page. Thus, you may wish to restrict what information you choose to share in your public profile.<br /><br />
+                    <strong>Participation and Withdraw</strong><br />
+                    Your participation is VOLUNTARY. You may withdraw from the experiment at any time without suffering any negative consequences.<br /><br />
+                    <strong>Identification of Investigators</strong><br />
+                    If you have any questions, feel free to contact Dr. Hongjing Lu (hongjing@ucla.edu), at the Department of Psychology, UCLA, 405 Hilgard Ave., Los Angeles, CA 90095-1563.<br /><br />
+                    <strong>Rights of Research Subjects</strong><br />
+                    You may withdraw your consent at any time and discontinue participation without penalty. You are not waiving any legal claims, rights or remedies because of your participation in this research study.<br /><br />
+                    <strong>UCLA Office of the Human Research Protection Program (OHRPP)</strong><br />
+                    If you have questions about your rights as a research subject, or you have concerns or suggestions and you want to talk to someone other than the researchers, you may contact the UCLA OHRPP by phone: (310) 206-2040; by email: participants@research.ucla.edu or by mail: Box 951406, Los Angeles, CA 90095-1406.
+            </div>
+            </div>
+        </div>
+
+        <!--======== INSTRUCTIONS QUIZ ========-->
+        <div id="quiz-box-mem" class="box hide">
+            <h4>What is your job in this experiment?</h4>
+            <br />
+            <label><input type="radio" name="quiz" value="forgot"> Select this option if you do not remember</label><br />
+            <label><input type="radio" name="quiz" value="nature"> Press 'r' when the image depicts nature</label><br />
+            <label><input type="radio" name="quiz" value="people"> Press 'r' when the image contains people</label><br />
+            <label><input type="radio" name="quiz" value="flash"> Press 'r' when the image flashes</label><br />
+            <label><input type="radio" name="quiz" value="repeat"> Press 'r' when the image repeats</label><br />
+            <button id="quiz-submit-btn-mem" class="submit-button">Submit</button>
+        </div>
+
+        <div id="quiz-box-rating" class="box hide">
+            <h4>What is your job in this experiment?</h4>
+            <br />
+            <label><input type="radio" name="quiz" value="forgot"> Select this option if you do not remember</label><br />
+            <label><input type="radio" name="quiz" value="feel"> Rate the image based on how pleasant it makes me feel</label><br />
+            <label><input type="radio" name="quiz" value="object"> Rate the image based on how much I like the object it depicts</label><br />
+            <label><input type="radio" name="quiz" value="visual"> Rate the image based on how visually pleasing it looks</label><br />
+            <label><input type="radio" name="quiz" value="positive"> Rate the image based on how positive the content is</label><br />
+            <button id="quiz-submit-btn-rating" class="submit-button">Submit</button>
+        </div>
+
+
+        <!--======== TASK ========-->
+        <div id="task-box" class="box hide">
+            <div class="progress-text"><span id="trial-progress"></span>% done</div>
+            <div class = 'test-area'>
+                <img id="test-img" src="images/blank.jpg" alt='IMG-ERROR: Please email yichiachen@g.ucla.edu with the message "IMG-ERROR" to receive credit.'>
+            </div>
+            <div class="buffer-area hide">
+                <img id="buffer-img" src="images/blank.jpg" alt="">
+            </div>
+            <div class="rating-area" id="rating-area">
+                <div class="rating-anchors anchor-left">Not at all</div>
+                <button class="rating-button r1" id="r1">1</button>
+                <button class="rating-button r2" id="r2">2</button>
+                <button class="rating-button r3" id="r3">3</button>
+                <button class="rating-button r4" id="r4">4</button>
+                <button class="rating-button r5" id="r5">5</button>
+                <button class="rating-button r6" id="r6">6</button>
+                <div class="rating-anchors anchor-right">Very much</div>
+            </div>
+        </div>
+
+        <!--======== REST ========-->
+        <!-- XXX -->
+        <div id ="rest-box" class="box hide">
+            <p id="rest-text"></p>
+        </div>
+
+
+        <!--======== DEBRIEFING QUESTIONS ========-->
+        <div id="debrief-question-box" class="box hide">
+            <div class='question'>
+                You are almost done! Please answer these last questions:
+            </div>
+            <div class='question'>
+                <p class='bold'>Q1. Did you complete this experiment seriously throughout (without responding randomly)?</p>
+                <p class='small-dim'>You will receive credit regardless of what your answer is here. Please be honest for science! Thanks!</p>
+                <label><div class='option'><input class='radio' type='radio' name='serious' value='0' /><p class='option-text'>No, I didn't.</p></div></label>
+                <label><div class='option'><input class='radio' type='radio' name='serious' value='1' /><p class='option-text'>Yes, I did.</p></div></label>
+            </div>
+            <div class="question">
+                <p class="bold">Q2. Was the browser in the full-screen mode during all the trials?</p>
+                <p class="small-dim">You will receive credit regardless of what your answer is here. Please be honest for science! Thanks!</p>
+                <label><div class="option"><input class="radio" type="radio" name="maximized" value="0" /><p class="option-text">No, it wasn't.</p></div></label>
+                <label><div class="option"><input class="radio" type="radio" name="maximized" value="1" /><p class="option-text">Yes, it was.</p></div></label>
+            </div>
+            <div class='question'>
+                <p class='bold'>Q3. Was any part of the procedure unclear? Did you have any problems completing any of the tasks?</p>
+                <p class='small-dim'>You will receive credit regardless of what your answer is here. Please be honest for science! Thanks!</p>
+                <textarea id='problems'></textarea>
+            </div>
+            <div class='question'>
+                <p class='bold'>Q4. What is your gender?</p>
+                <label><div class='option'><input class='radio' type='radio' name='gender' value='F' /><p class='option-text'>Female</p></div></label>
+                <label><div class='option'><input class='radio' type='radio' name='gender' value='M' /><p class='option-text'>Male</p></div></label>
+                <label><div class='option'><input class='radio' type='radio' name='gender' value='O' /><p class='option-text'>Other</p></div></label>
+                <label><div class='option'><input class='radio' type='radio' name='gender' value='N' /><p class='option-text'>I would rather not say</p></div></label>
+            </div>
+            <div class='question'>
+                <p class='bold'>Q5. What is your age?</p>
+                <input type='number' id='age' min='0' max='150'/>
+            </div>
+            <button class="submit-button" onclick="submit_debriefing_questions()">Submit</button>
+            <p class='warning' id='questions-warning'></p>
+            </div>
+
+        <!--======== DEBRIEFING ========-->
+        <div id="debrief-box" class="box hide">
+        <p id="fix">
+            <strong>Debriefing Sheet</strong><br />
+            What we are looking at here is your aesthetic taste and your memory "taste". What do we mean by that? Having your own aesthetic taste means that you like some images to different extent from others. What we mean by memory "taste" here is similar: how you encode the images into your memory differently from others. We are interested in whether these two kind of individual differences are related. If you have an aesthetic taste that is very different from the average, would you also have a very different memory pattern compares to others?<br /><br />
+
+            This study is part of a bigger project, and here is some information about the general topic we are studying:<br /><br />
+
+            We are studying human cognition by looking at how people differ in terms of personality, cognitive tendencies, and skills. Here are a few example scientific questions we are looking at: <br /><br />
+
+            Do people agree what looks pretty and what looks bad?<br />
+            How is one’s personality related to their judgement of social situations?<br />
+            Would cultural backgrounds influence memory of different objects?<br />
+
+            If you have any questions, please feel free to contact the researcher Yi-Chia Chen at yichiachen@g.ucla.edu.<br />
+        </p>
+        <button class="submit-button" id="end-button" onclick='end_to_sona()'>End</button>
+        </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mobile-detect/1.4.3/mobile-detect.min.js'></script>
+    <script src="func.js"></script>
+    <script src="instr.js"></script>
+    <script src="task.js"></script>
+    <script src="subj.js"></script>
+    <script src="trial_lists/mem_list_1.js"></script>
+    <script src="trial_lists/mem_list_2.js"></script>
+    <script src="trial_lists/mem_list_3.js"></script>
+    <script src="trial_lists/mem_list_4.js"></script>
+    <script src="trial_lists/mem_list_5.js"></script>
+    <script src="trial_lists/mem_list_6.js"></script>
+    <script src="trial_lists/mem_list_7.js"></script>
+    <script src="trial_lists/mem_list_8.js"></script>
+    <script src="trial_lists/mem_list_9.js"></script>
+    <script src="trial_lists/mem_list_10.js"></script>
+    <script src="mem_img_list.js"></script>
+    <script src="rating_img_list.js"></script>
+
+
+    <script src="exp.js"></script>
+    </body>
+</html>
